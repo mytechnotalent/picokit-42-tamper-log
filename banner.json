@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-42-tamper-log",
+  "eyebrow": "PICOKIT // LESSON 42",
+  "title": "PICOKIT // TAMPER LOG",
+  "subtitle": "BLAKE2b HASH CHAIN + RECOMPUTE ON READ + SINGLE BYTE DETECT",
+  "accent": "#FFC347",
+  "dim": "#9E782C",
+  "white": "#F3EEE5",
+  "cyan": "#7FD8E0",
+  "bg": "#110D04",
+  "bg_edge": "#050301",
+  "icon": "hash",
+  "panel_status": "EVENTS 3  ·  CHAIN valid  ·  v=1",
+  "chips": [
+    {
+      "label": "NODE",
+      "value": "42"
+    },
+    {
+      "label": "HASH",
+      "value": "blake2b"
+    },
+    {
+      "label": "CHAIN",
+      "value": "valid"
+    },
+    {
+      "label": "RADIO",
+      "value": "-31 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00042  seq 7  HEARTBEAT  AEAD ok",
+    "[*] heartbeat body {\"n\":42,\"s\":7,\"v\":1}",
+    "[+] chain recomputed  head matches  v=1",
+    "[+] one byte flipped  head differs  v=0"
+  ],
+  "categories": [
+    "LOG",
+    "HASH",
+    "CHAIN",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "TL-01",
+      "label": "events",
+      "value": "16"
+    },
+    {
+      "tag": "TL-02",
+      "label": "chain",
+      "value": "blake2b"
+    },
+    {
+      "tag": "TL-03",
+      "label": "verdict",
+      "value": "v=1"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  EVENT  ·  HASH  ·  RADIO  ==[ TAMPER ]=="
+  ],
+  "layout": "split",
+  "stat": "42"
+}
